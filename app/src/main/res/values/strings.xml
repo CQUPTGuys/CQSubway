@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CQSubway</string>
+
+    <string name="search">查找地铁站点信息</string>
+    <string name="guide">向导</string>
+    <string name="route">路线</string>
+    <string name="mine">关于</string>
+</resources>
