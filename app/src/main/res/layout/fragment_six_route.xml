@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="站点名称"
-            android:textSize="12sp"
+            android:textSize="15sp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             android:textColor="@color/dark_gray" />
@@ -29,14 +29,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="茶园方向"
-            android:textSize="12sp"
+            android:textSize="15sp"
             android:layout_centerInParent="true"
             android:textColor="@color/dark_gray" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="北碚方向"
-            android:textSize="12sp"
+            android:textSize="15sp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="16dp"
