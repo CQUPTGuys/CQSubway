@@ -1,5 +1,6 @@
-package com.kevin.cqsubway;
+package com.kevin.cqsubway.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -7,6 +8,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.kevin.cqsubway.R;
 import com.kevin.cqsubway.widget.DragImageView;
 
 import butterknife.Bind;
@@ -51,8 +53,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.guide_rl:
                 break;
             case R.id.route_rl:
+                startActivity(new Intent(this,RouteActivity.class));
                 break;
             case R.id.about:
+                startActivity(new Intent(this,AboutMeActivity.class));
                 break;
         }
     }

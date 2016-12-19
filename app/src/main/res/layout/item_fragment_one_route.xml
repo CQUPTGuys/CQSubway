@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+<ImageView
+    android:layout_width="20dp"
+    android:layout_height="20dp"
+    android:src="@mipmap/one_route"
+    android:tint="@color/item_now_red"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="8dp"
+    android:id="@+id/iv_item_one"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="较场口"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/iv_item_one"
+        android:layout_toEndOf="@+id/iv_item_one"
+        android:textColor="@color/item_now_red"
+        android:id="@+id/tv_one_route_name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="06:40-22:53"
+        android:textSize="15sp"
+        android:layout_centerInParent="true"
+        android:id="@+id/tv_one_right"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="06:32-22:32"
+        android:textSize="15sp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:id="@+id/tv_one_left"/>
+</RelativeLayout>
