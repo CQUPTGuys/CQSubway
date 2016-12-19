@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.kevin.cqsubway.R;
+import com.kevin.cqsubway.app.SubwayApplication;
 import com.kevin.cqsubway.model.db.SubwayOne;
 import com.kevin.cqsubway.ui.adapter.OneRouteListViewAdapter;
 
@@ -32,14 +33,11 @@ public class OneNumberFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_one_route, container, false);
-
-        queryList(); ButterKnife.bind(this, view);
+        ButterKnife.bind(this, view);
+        subwayOneList= SubwayApplication.subwayOneList;
         adapter=new OneRouteListViewAdapter(getActivity(),subwayOneList);
         lv_one_route.setAdapter(adapter);
         return view;
     }
 
-    private void queryList() {
-        subwayOneList=DataSupport.findAll(SubwayOne.class);
-    }
 }

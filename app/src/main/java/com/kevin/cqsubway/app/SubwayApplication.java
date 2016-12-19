@@ -6,6 +6,7 @@ import com.kevin.cqsubway.model.db.SubwayThree;
 import com.kevin.cqsubway.model.db.SubwayTwo;
 
 import org.litepal.LitePalApplication;
+import org.litepal.crud.DataSupport;
 
 import java.util.List;
 
@@ -17,7 +18,11 @@ import java.util.List;
 public class SubwayApplication extends LitePalApplication{
 
     private boolean isFirstOpen = true;
-    @Override
+    public static List<SubwayOne> subwayOneList;
+    public static List<SubwayTwo> subwayTwoList;
+    public static List<SubwayThree> subwayThreeList;
+    public static List<SubwaySix> subwaySixList;
+   @Override
     public void onCreate() {
         super.onCreate();
         if (isFirstOpen){
@@ -55,7 +60,7 @@ public class SubwayApplication extends LitePalApplication{
         new SubwayOne("06:36-23:22","06:32-22:32",22,"大学城",122,"").save();
         new SubwayOne(":-:","06:30-22:30",23,"尖顶坡",123,"").save();
 
-
+        subwayOneList= DataSupport.findAll(SubwayOne.class);
     }
     private void initSubwayTwo(){
         new SubwayTwo("06:30-22:30",":-:",0,"较场口",200,"").save();
@@ -83,6 +88,8 @@ public class SubwayApplication extends LitePalApplication{
         new SubwayTwo("06:40-22:40","06:36-22:26",22,"白居寺",222,"").save();
         new SubwayTwo("06:44-22:44","06:32-22:22",23,"大江",223,"").save();
         new SubwayTwo(":-:","06:30-22:20",24,"鱼洞",224,"").save();
+
+        subwayTwoList=DataSupport.findAll(SubwayTwo.class);
     }
     private void initSubwayThree(){
         new SubwayThree(":-:","06:30-22:30",0,"江北机场",400,"").save();
@@ -125,6 +132,7 @@ public class SubwayApplication extends LitePalApplication{
         new SubwayThree("06:34-22:32","06:37-00:04",37,"金竹",337,"").save();
         new SubwayThree("06:31-22:30",":-:",38,"鱼洞",338,"").save();
 
+        subwayThreeList=DataSupport.findAll(SubwayThree.class);
 
     }
     private void initSubwaySix(){
@@ -162,6 +170,8 @@ public class SubwayApplication extends LitePalApplication{
         new SubwaySix("07:43-20:23","07:43-20:24",22,"高义口",2222,"").save();
         new SubwaySix("07:47-20:27","07:41-20:26",23,"国博中心",2232,"").save();
         new SubwaySix(":-:","07:38-20:24",24,"悦来",2242,"").save();
+
+        subwaySixList=DataSupport.findAll(SubwaySix.class);
     }
 
 }
