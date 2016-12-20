@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.kevin.cqsubway.R;
+import com.kevin.cqsubway.app.SubwayApplication;
 import com.kevin.cqsubway.model.db.SubwayOne;
 import com.kevin.cqsubway.model.db.SubwaySix;
 
@@ -19,12 +20,11 @@ import java.util.List;
  */
 public class SixRouteListViewAdapter extends BaseAdapter{
     private Context mContext;
-    private List<SubwaySix> list=new ArrayList<>();
+    private List<SubwaySix> list= SubwayApplication.subwaySixList;
     private TextView tv_six_route_name,tv_six_right,tv_six_left;
 
-    public SixRouteListViewAdapter(Context mContext, List<SubwaySix> list) {
+    public SixRouteListViewAdapter(Context mContext ) {
         this.mContext = mContext;
-        this.list = list;
     }
 
     @Override

@@ -10,12 +10,8 @@ import android.widget.ListView;
 
 import com.kevin.cqsubway.R;
 import com.kevin.cqsubway.app.SubwayApplication;
-import com.kevin.cqsubway.model.db.SubwayOne;
 import com.kevin.cqsubway.model.db.SubwaySix;
-import com.kevin.cqsubway.ui.adapter.OneRouteListViewAdapter;
 import com.kevin.cqsubway.ui.adapter.SixRouteListViewAdapter;
-
-import org.litepal.crud.DataSupport;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +23,6 @@ import butterknife.ButterKnife;
  * Created by xianling on 2016/12/19.
  */
 public class SixNumberFragment extends Fragment{
-    private List<SubwaySix> subwayOneList=new ArrayList<>();
     private SixRouteListViewAdapter adapter;
     @Bind(R.id.lv_six_route)
     ListView lv_six_route;
@@ -36,8 +31,7 @@ public class SixNumberFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_six_route, container, false);
         ButterKnife.bind(this, view);
-        subwayOneList= SubwayApplication.subwaySixList;
-        adapter=new SixRouteListViewAdapter(getActivity(),subwayOneList);
+        adapter=new SixRouteListViewAdapter(getActivity());
         lv_six_route.setAdapter(adapter);
         return view;
     }

@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.kevin.cqsubway.R;
+import com.kevin.cqsubway.app.SubwayApplication;
 import com.kevin.cqsubway.model.db.SubwayOne;
 
 import java.util.ArrayList;
@@ -18,12 +19,11 @@ import java.util.List;
  */
 public class OneRouteListViewAdapter extends BaseAdapter{
     private Context mContext;
-    private List<SubwayOne> list=new ArrayList<>();
+    private List<SubwayOne> list= SubwayApplication.subwayOneList;
     private TextView tv_one_route_name,tv_one_right,tv_one_left;
 
-    public OneRouteListViewAdapter(Context mContext, List<SubwayOne> list) {
+    public OneRouteListViewAdapter(Context mContext) {
         this.mContext = mContext;
-        this.list = list;
     }
 
     @Override

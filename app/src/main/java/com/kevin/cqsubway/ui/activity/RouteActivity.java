@@ -2,6 +2,7 @@ package com.kevin.cqsubway.ui.activity;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -35,11 +36,15 @@ public class RouteActivity extends AppCompatActivity{
     ViewPager vp_route;
     @Bind(R.id.tl_route)
     TabLayout tl_route;
+    @Bind(R.id.collapsingToolbarLayout)
+    CollapsingToolbarLayout collapsingToolbarLayout;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_route);
+        setContentView(R.layout.activity_route_new);
         ButterKnife.bind(this);
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(R.color.colorPrimary));
+        collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.white));
         initFragment();
         vp_route.setAdapter(adapter);
         tl_route.setupWithViewPager(vp_route);

@@ -13,8 +13,6 @@ import com.kevin.cqsubway.app.SubwayApplication;
 import com.kevin.cqsubway.model.db.SubwayOne;
 import com.kevin.cqsubway.ui.adapter.OneRouteListViewAdapter;
 
-import org.litepal.crud.DataSupport;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +23,6 @@ import butterknife.ButterKnife;
  * Created by xianling on 2016/12/19.
  */
 public class OneNumberFragment extends Fragment{
-    private List<SubwayOne> subwayOneList=new ArrayList<>();
     private OneRouteListViewAdapter adapter;
     @Bind(R.id.lv_one_route)
     ListView lv_one_route;
@@ -34,10 +31,10 @@ public class OneNumberFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_one_route, container, false);
         ButterKnife.bind(this, view);
-        subwayOneList= SubwayApplication.subwayOneList;
-        adapter=new OneRouteListViewAdapter(getActivity(),subwayOneList);
+        adapter=new OneRouteListViewAdapter(getActivity());
         lv_one_route.setAdapter(adapter);
         return view;
     }
+
 
 }

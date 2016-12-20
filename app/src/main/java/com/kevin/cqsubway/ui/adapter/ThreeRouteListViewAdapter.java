@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.kevin.cqsubway.R;
+import com.kevin.cqsubway.app.SubwayApplication;
 import com.kevin.cqsubway.model.db.SubwayOne;
 import com.kevin.cqsubway.model.db.SubwayThree;
 
@@ -19,12 +20,11 @@ import java.util.List;
  */
 public class ThreeRouteListViewAdapter extends BaseAdapter{
     private Context mContext;
-    private List<SubwayThree> list=new ArrayList<>();
+    private List<SubwayThree> list= SubwayApplication.subwayThreeList;
     private TextView tv_three_route_name,tv_three_right,tv_three_left;
 
-    public ThreeRouteListViewAdapter(Context mContext, List<SubwayThree> list) {
+    public ThreeRouteListViewAdapter(Context mContext) {
         this.mContext = mContext;
-        this.list = list;
     }
 
     @Override
