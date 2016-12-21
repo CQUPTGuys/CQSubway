@@ -4,6 +4,8 @@ import com.kevin.cqsubway.model.db.SubwayOne;
 import com.kevin.cqsubway.model.db.SubwaySix;
 import com.kevin.cqsubway.model.db.SubwayThree;
 import com.kevin.cqsubway.model.db.SubwayTwo;
+import com.kevin.cqsubway.utils.LogUtils;
+import com.kevin.cqsubway.utils.SPUtils;
 
 import org.litepal.LitePalApplication;
 import org.litepal.crud.DataSupport;
@@ -17,20 +19,22 @@ import java.util.List;
 
 public class SubwayApplication extends LitePalApplication{
 
-    private boolean isFirstOpen = true;
     public static List<SubwayOne> subwayOneList;
     public static List<SubwayTwo> subwayTwoList;
     public static List<SubwayThree> subwayThreeList;
     public static List<SubwaySix> subwaySixList;
+
+
    @Override
     public void onCreate() {
         super.onCreate();
-        if (isFirstOpen){
+        if ((boolean)SPUtils.get(this,"isFirstOpen",true)){
+            LogUtils.d("第一次打开执行初始化数据");
             initSubwayOne();
             initSubwayTwo();
             initSubwayThree();
             initSubwaySix();
-            isFirstOpen = false;
+            SPUtils.put(this,"isFirstOpen",false);
         }
     }
 
@@ -380,5 +384,7 @@ public class SubwayApplication extends LitePalApplication{
 
         subwaySixList=DataSupport.findAll(SubwaySix.class);
     }
+
+
 
 }

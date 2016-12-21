@@ -10,7 +10,10 @@
     <color name="dark_gray">#808080</color>
     <color name="item_now_red">#FFF90404</color>
     <color name="item_now_green">#0FB360</color>
+    <color name="blue_text">#9dc8fd</color>
 
     <drawable name="item_nomal">#ffffff</drawable>
     <drawable name="item_clicked">#CCCCCC</drawable>
+    <color name="light_gray">#969696</color>
+
 </resources>

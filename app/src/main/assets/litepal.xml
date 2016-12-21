@@ -2,12 +2,13 @@
 <litepal>
     <dbname value="CQSubway" ></dbname>
 
-    <version value="3" ></version>
+    <version value="1" ></version>
 
     <list>
         <mapping class="com.kevin.cqsubway.model.db.SubwayOne"></mapping>
         <mapping class="com.kevin.cqsubway.model.db.SubwayTwo"></mapping>
         <mapping class="com.kevin.cqsubway.model.db.SubwayThree"></mapping>
         <mapping class="com.kevin.cqsubway.model.db.SubwaySix"></mapping>
+        <mapping class="com.kevin.cqsubway.model.db.History"></mapping>
     </list>
 </litepal>

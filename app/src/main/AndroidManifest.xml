@@ -16,8 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.RouteActivity"/>
-        <activity android:name=".ui.activity.AboutMeActivity"/>
+        <activity android:name=".ui.activity.RouteActivity" />
+        <activity android:name=".ui.activity.AboutMeActivity" />
+        <activity android:name=".ui.activity.GuideActivity" />
+        <activity android:name=".ui.activity.EditStationActivity" />
+        <activity android:name=".ui.activity.GuideShowAvitivty"></activity>
     </application>
 
 </manifest>

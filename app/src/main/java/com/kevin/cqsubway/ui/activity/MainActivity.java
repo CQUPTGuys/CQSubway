@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.search_cd:
                 break;
             case R.id.guide_rl:
+                Intent toGuide = new Intent(MainActivity.this,GuideActivity.class);
+                startActivity(toGuide);
                 break;
             case R.id.route_rl:
                 startActivity(new Intent(this,RouteActivity.class));
