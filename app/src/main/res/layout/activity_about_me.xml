@@ -3,7 +3,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-<include layout="@layout/view_toolbar"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/guide_back"
+                android:layout_centerVertical="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/ic_back"/>
+            <TextView
+                android:layout_toRightOf="@+id/guide_back"
+                android:text="重庆地铁帮"
+                android:layout_marginLeft="12dp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="250dp">

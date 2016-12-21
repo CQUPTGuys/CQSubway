@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -28,6 +29,8 @@ public class AboutMeActivity extends AppCompatActivity implements AdapterView.On
     ListView lv_activity_about_me;
     @Bind(R.id.tv_app_verson)
     TextView tv_app_verson;
+    @Bind(R.id.guide_back)
+    ImageView back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +39,12 @@ public class AboutMeActivity extends AppCompatActivity implements AdapterView.On
         initView();
     }
     private void initView() {
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         adapter = new AboutMeAdapter(this, ints);
         lv_activity_about_me.setOnItemClickListener(this);
         lv_activity_about_me.setAdapter(adapter);

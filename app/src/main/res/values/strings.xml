@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CQSubway</string>
+    <string name="app_name">重庆地铁帮</string>
 
     <string name="search">查找地铁站点信息</string>
     <string name="guide">向导</string>
@@ -11,5 +11,5 @@
 
     <string name="functin_CQSubway_content">1.可随时查看各线路站点信息。\n2.可为你定制最优出行路线。\n3.根据输入站点,可了解该站点的详细情况</string>
     <string name="help_CQSubway_content">1.进入向导页面，可进行搜说站点，获取详细信息。并且能够将你输入的两个站点，计算最优路线。\n2.进度路线页面，可滑动观看站点信息</string>
-    <string name="call_CQSubway_content">联系邮箱：472075162qq.com(Dragon)</string>
+    <string name="call_CQSubway_content">联系邮箱：DragonLer@126.com(Kevin)</string>
 </resources>
