@@ -13,6 +13,11 @@ public class History extends DataSupport {
 
     private String to;
 
+    public History(String from, String to) {
+        this.from = from;
+        this.to = to;
+    }
+
     public String getFrom() {
         return from;
     }

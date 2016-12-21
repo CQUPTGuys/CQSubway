@@ -72,7 +72,7 @@ public class EditStationActivity extends AppCompatActivity {
                             QueryData(charSequence.toString());
                         }
                     }, 2000);
-                    QueryData(charSequence.toString());
+                    //QueryData(charSequence.toString());
                 }
             }
 

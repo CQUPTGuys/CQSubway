@@ -12,13 +12,20 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <TextView
-        android:layout_centerInParent="true"
-        android:id="@+id/toolbar_title"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/guide_back"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/ic_back"/>
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/toolbar_title"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 
 </android.support.v7.widget.Toolbar>

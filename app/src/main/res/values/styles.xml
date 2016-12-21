@@ -11,4 +11,5 @@
     <style name="AppTheme.CollapsingToolbarLayout">
         <item name="android:textSize">@dimen/toolbar_text_size</item>
     </style>
+
 </resources>

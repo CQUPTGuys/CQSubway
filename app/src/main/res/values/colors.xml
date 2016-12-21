@@ -15,5 +15,6 @@
     <drawable name="item_nomal">#ffffff</drawable>
     <drawable name="item_clicked">#CCCCCC</drawable>
     <color name="light_gray">#969696</color>
+    <color name="yellow">#fdbe52</color>
 
 </resources>
